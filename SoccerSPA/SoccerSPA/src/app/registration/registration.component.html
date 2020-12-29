@@ -1,0 +1,77 @@
+<span class = "registration-form">
+  <form class = "form-body" [formGroup]='registrationForm' (ngSubmit)='onSubmit()'>
+    <section class="form-body-first">
+      <section class="form-body-first-body">
+        <div class="form-element">
+          <label class="form-element-text">First Name:</label>
+          <input type='text' appHighlightBlueInput class="form-element-input-text" formControlName='firstName' required>
+          <app-validate-helper class="error-message" [name]='registrationForm.controls["firstName"]'></app-validate-helper>
+        </div>
+
+        <div class="form-element">
+          <label class="form-element-text">Last Name:</label>
+          <input type='text' appHighlightBlueInput class="form-element-input-text"   formControlName='lastName' required>
+          <app-validate-helper class="error-message" [name]='registrationForm.controls["lastName"]'></app-validate-helper>
+        </div>
+
+        <div class="form-element">
+          <label class="form-element-text">User Name:</label>
+          <input type = 'text' appHighlightBlueInput class="form-element-input-text"  formControlName='userName' required>
+          <div class="error-message" *ngIf='registrationForm.controls["userName"].errors?.UserNameTaken'>
+            <p>Username has already been taken</p>
+          </div>
+          <app-validate-helper class="error-message" [name]='registrationForm.controls["userName"]'></app-validate-helper>
+        </div>
+
+        <div class="form-element">
+          <label class="form-element-text">Email:</label>
+          <input type='email' appHighlightBlueInput class="form-element-input-text" formControlName='email' email required>
+            <div class="error-message" *ngIf='registrationForm.controls["email"].errors?.EmailTaken'>
+              <p>Email has already been taken</p>
+            </div>
+            <app-validate-helper class="error-message" [name]='registrationForm.controls["email"]'></app-validate-helper>
+        </div>
+
+        <div class="form-element">
+          <label class="form-element-text">Date Of Birth:</label>
+          <input type='date' appHighlightBlueInput class="form-element-input-text" formControlName='dateOfBirth'>
+          <app-validate-helper class="error-message" [name]='registrationForm.controls["dateOfBirth"]'></app-validate-helper>
+        </div>
+      </section>
+    </section>
+
+    <section class="form-body-second">
+      <section class="form-body-second-body">
+        <div class="form-element-passwords" formGroupName='passwords'>
+          <div class="form-element">
+            <label class="form-element-text">Password:</label>
+            <input type='password' appHighlightBlueInput class="form-element-input-text" formControlName='password'>
+            <app-validate-helper class="error-message" [name]='registrationForm.controls["password"]'></app-validate-helper>
+          </div>
+
+          <div class="form-element">
+            <label class="form-element-text">Confirm password:</label>
+            <input type='password' appHighlightBlueInput class="form-element-input-text" formControlName='passwordConfirmed'>
+            <div class="error-message" *ngIf='registrationForm.get("passwords").get("passwordConfirmed").touched
+                      && registrationForm.get("passwords").hasError("PasswordDoesNotMatch")
+                      && registrationForm.get("passwords").get("password").touched
+                      && registrationForm.get("passwords").get("passwordConfirmed").value !="" '>
+              Password doesn`t match
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-submit-block">
+          <button type="submit" class="btn-submit genres" [disabled]='registrationForm.invalid'>Register</button>
+        </div>
+
+      <span class="login-readress">
+        <label class='login-readress-text'>Have an account?<a routerLink = '/Login'>Sign up</a></label>
+      </span>
+      </section>
+
+    </section>
+
+  </form>
+</span>
+

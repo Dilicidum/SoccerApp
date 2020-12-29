@@ -1,0 +1,72 @@
+<section class="upload-form">
+
+  <form class="upload-form-body" [formGroup]='uploadPlayerForm' (ngSubmit)='onSubmit()'>
+    <div class="upload-form-body-first">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">First name:</span>
+        <input type="text" formControlName='firstName'  class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["firstName"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Last Name:</span>
+        <input type="text" formControlName='lastName' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["lastName"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Date Of Birth:</span>
+        <input type="date" formControlName='dateOfBirth' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["dateOfBirth"]'></app-validate-helper>
+      </div>
+
+
+
+    </div>
+
+    <div class="upload-form-body-second">
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Sallary:</span>
+        <input type="text" formControlName='sallary' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["sallary"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element-1">
+        <div class="upload-form-element-first">
+          <span class="upload-form-element-text">Positions:</span>
+          <div class="">
+            <select [value]='positions[0]' formControlName='position' class="upload-form-element-input">
+              <option> Choose country</option>
+              <option *ngFor='let position of positions' class="upload-form-element-input-text">
+                {{position}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="upload-form-element-1">
+        <div class="upload-form-element-first">
+          <span class="upload-form-element-text">Countries:</span>
+          <div class="">
+            <select [value]='countries[0]' formControlName='country' class="upload-form-element-input">
+              <option> Choose country</option>
+              <option *ngFor='let country of countries' class="upload-form-element-input-text">
+                {{country}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+
+      <button class="upload-form-submit-btn" type="submit">Upload</button>
+    </div>
+
+  </form>
+
+  </section>
+

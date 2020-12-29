@@ -1,0 +1,53 @@
+.profile-nav-menu{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid #4169E1;
+  border-right: 2px solid #4169E1;
+}
+
+.profile-nav-menu-item{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+
+.profile-nav-menu-item-text{
+  padding: 3%;
+  margin: 3%;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.profile-nav-menu-item:hover{
+  background-color: rgb(250, 250, 250);
+  border-left: 3px solid #6495ED;
+}
+
+.btn-submit{
+  color: #4169E1;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+
+a:focus{
+  color: #4169E1;
+}
+
+a:active{
+  color: #4169E1;
+}
+
+button:focus{
+  color: #4169E1;
+}

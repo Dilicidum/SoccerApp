@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Sallary</th>
+      <th scope="col">Team Name</th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let player of players'>
+    <tr>
+      <th scope="row">{{player.playerId}}</th>
+      <td>{{player.firstName}}</td>
+      <td>{{player.lastName}}</td>
+      <td>{{player.position}}</td>
+      <td>{{player.sallary}}</td>
+      <td *ngIf='player.team'>{{player.team.name}}</td>
+    </tr>
+  </tbody>
+</table>

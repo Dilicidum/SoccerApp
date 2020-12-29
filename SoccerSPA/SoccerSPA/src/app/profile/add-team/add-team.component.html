@@ -1,0 +1,25 @@
+<section class="upload-form">
+
+  <form class="upload-form-body" [formGroup]='uploadTeamForm' (ngSubmit)='onSubmit()'>
+    <div class="upload-form-body-first">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Name:</span>
+        <input type="text" formControlName='name'  class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadTeamForm.controls["name"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Year Of Creation:</span>
+        <input type="text" formControlName='yearOfCreation' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadTeamForm.controls["yearOfCreation"]'></app-validate-helper>
+      </div>
+      <button class="upload-form-submit-btn" type="submit">Upload</button>
+    </div>
+
+
+
+  </form>
+
+  </section>
+
+

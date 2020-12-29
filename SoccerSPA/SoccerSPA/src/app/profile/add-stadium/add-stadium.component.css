@@ -1,0 +1,92 @@
+.upload-form{
+  margin: 0% 2% 0% 2%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vh;
+}
+
+.upload-form-body{
+  display: flex;
+  width: 100%;
+}
+
+.upload-form-body-first{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.upload-form-body-second{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.upload-form-element{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+  box-shadow: 0 0 5px #6495ED;
+  border: 3px solid #4169E1;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.upload-form-element-1{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+  border: 3px solid #4169E1;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+.upload-form-element-first{
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  padding: 3%;
+}
+
+.upload-form-element-dynamic{
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid gray;
+  background-color: lightgray;
+  border-radius: 3px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.upload-form-element-text{
+  display: flex;
+  margin: 2%;
+}
+
+.upload-form-element-input{
+  display: flex;
+  margin: 2%;
+  border: none;
+  border: 3px solid #4169E1;
+}
+
+.upload-form-submit-btn{
+  margin: 2% 2% 4% 2%;
+  background-color: royalblue;
+  height: 5vh;
+  border-radius: 7px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.upload-form-element-text-second{
+  display: flex;
+  margin: 2%;
+  align-items: flex-start;
+}

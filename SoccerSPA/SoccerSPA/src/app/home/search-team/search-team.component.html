@@ -1,0 +1,29 @@
+<form [formGroup]='searchForm' (ngSubmit)='onSubmit()'>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Home Team Id</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Value" formControlName='value'>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Date</label>
+      <input type='date'  formControlName='date'>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<table class="table" *ngIf='games.length > 0'>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Guest Team Name</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor='let game of games'>
+    <tr>
+      <th scope="row">{{game.gameId}}</th>
+      <td>{{game.guest_Team.name}}</td>
+
+    </tr>
+  </tbody>
+</table>

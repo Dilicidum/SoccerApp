@@ -1,0 +1,45 @@
+<section class="upload-form">
+
+  <form class="upload-form-body" [formGroup]='uploadPlayerForm' (ngSubmit)='onSubmit()'>
+    <div class="upload-form-body-first">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Name:</span>
+        <input type="text" formControlName='name'  class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["name"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Address:</span>
+        <input type="text" formControlName='address' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["address"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Max amount of viewers:</span>
+        <input type="text" formControlName='max_AmountOfViewers' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["max_AmountOfViewers"]'></app-validate-helper>
+      </div>
+
+
+
+    </div>
+
+    <div class="upload-form-body-second">
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Price per Seat:</span>
+        <input type="text" formControlName='pricePerSeat' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadPlayerForm.controls["pricePerSeat"]'></app-validate-helper>
+      </div>
+
+
+
+
+
+      <button class="upload-form-submit-btn" type="submit">Upload</button>
+    </div>
+
+  </form>
+
+  </section>
+

@@ -1,0 +1,58 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  height: 99%;
+}
+
+.item{
+  display: flex;
+  padding: 3%;
+}
+
+.item-description{
+
+  display: flex;
+  flex-basis: 30%;
+  justify-content: flex-end;
+  margin-right: 3%;
+}
+
+.item-input{
+  display: flex;
+  flex-basis: 60%;
+}
+
+.item-description-text{
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-input-text{
+  border-radius: 3px;
+  height: 3vh;
+  width: 60%;
+  border: 1px solid lightgrey;
+
+}
+
+.item-input-text:focus{
+  border: 3px solid #6495ED;
+}
+
+.btn-submit{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #4169E1;
+  color: white;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 5vh;
+}
+
+button:disabled{
+  background-color: #adcae6;
+}

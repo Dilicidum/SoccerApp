@@ -1,0 +1,38 @@
+
+<section class="upload-form">
+
+  <form class="upload-form-body" [formGroup]='uploadGameForm' (ngSubmit)='onSubmit()'>
+    <div class="upload-form-body-first">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Start time:</span>
+        <input type="datetime-local" formControlName='startTime'  class="upload-form-element-input" placeholder="">
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Stadium Id:</span>
+        <input type="text" formControlName='stadiumId' class="upload-form-element-input" placeholder="">
+      </div>
+
+    </div>
+
+    <div class="upload-form-body-second">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Amount of tickets sold:</span>
+        <input type="text" formControlName = 'amountSoldTickets' class="upload-form-element-input" placeholder="">
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Result:</span>
+        <input type="text" formControlName = 'result' class="upload-form-element-input" placeholder="">
+      </div>
+
+
+      <button class="upload-form-submit-btn" type="submit">Upload</button>
+      <button class="upload-form-submit-btn" type="submit">Delete</button>
+    </div>
+
+  </form>
+
+  </section>
+
+

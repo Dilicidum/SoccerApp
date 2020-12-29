@@ -1,0 +1,14 @@
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Identity.deps.json
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Identity.dll
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Identity.pdb
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.csprojAssemblyReference.cache
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.AssemblyInfoInputs.cache
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.AssemblyInfo.cs
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.csproj.CoreCompileInputs.cache
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.dll
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.pdb
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Application.dll
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Application.pdb
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\kosty\OneDrive\Desktop\CSharp\Soccer\SoccerApp\Identity\obj\Debug\netcoreapp3.1\Identity.csproj.CopyComplete

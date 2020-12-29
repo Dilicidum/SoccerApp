@@ -1,0 +1,9 @@
+<div *ngIf='formControl?.invalid && (formControl?.touched || formControl?.dirty)' class="invalid-field-block">
+  <div *ngIf='formControl?.errors?.required'>
+    <p class="required-input">
+      Field is required
+    </p>
+  </div>
+</div>
+
+

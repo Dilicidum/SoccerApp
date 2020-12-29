@@ -1,0 +1,28 @@
+<button type="button" class="btn btn-dark" (click)='sortGamesByDate()'>Sort by date</button>
+<button type="button" class="btn btn-primary" (click)='sortGamesByResult()'>Sort by result</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Date</th>
+      <th scope="col">House Team</th>
+      <th scope="col">Guest Team</th>
+      <th scope="col">Stadium</th>
+      <th scope="col">League</th>
+      <th scope="col">Result</th>
+      <th scope="col">Game Result</th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let game of games'>
+    <tr >
+      <th scope="row">{{game.gameId}}</th>
+      <td>{{game.startTime | date:'medium'}}</td>
+      <td>{{game.house_Team.name}}</td>
+      <td>{{game.guest_Team.name}}</td>
+      <td>{{game.stadium.name}}</td>
+      <td>{{game.league.name}}</td>
+      <td>{{game.result}}</td>
+      <td>{{game.gameResult}}</td>
+    </tr>
+  </tbody>
+</table>

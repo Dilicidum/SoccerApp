@@ -1,0 +1,51 @@
+<form class="container" [formGroup]='profileForm' (ngSubmit)='onChange()'>
+  <div class="item">
+    <div class="item-description">
+      <span class="item-description-text">First Name</span>
+    </div>
+    <div class="item-input">
+      <input type="text" class="item-input-text" [value]='this.user.firstName' formControlName='firstName'>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-description">
+      <span class="item-description-text">Last Name</span>
+    </div>
+    <div class="item-input">
+      <input type="text" class="item-input-text" [value]='this.user.lastName' formControlName='lastName'>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-description">
+      <span class="item-description-text">Username</span>
+    </div>
+    <div class="item-input">
+      <input type="text" class="item-input-text" [value]='this.user.userName' formControlName='userName'>
+    </div>
+    <div class="error-message" *ngIf='profileForm.controls["userName"].errors?.UserNameTaken
+     && profileForm.controls["userName"].touched' >
+      <p>Username has already been taken</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-description">
+      <span class="item-description-text">Email</span>
+    </div>
+    <div class="item-input">
+      <input type="email" class="item-input-text" [value]='this.user.email' formControlName='email'>
+    </div>
+    <div class="error-message" *ngIf='profileForm.controls["email"].errors?.EmailTaken
+      && profileForm.controls["email"].touched'>
+      <p>Email has already been taken</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-description">
+      <span class="item-description-text"></span>
+    </div>
+  </div>
+</form>

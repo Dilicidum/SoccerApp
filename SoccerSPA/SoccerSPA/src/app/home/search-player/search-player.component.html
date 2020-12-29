@@ -1,0 +1,40 @@
+<form [formGroup]='searchForm' (ngSubmit)='onSubmit()'>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Player</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Value" formControlName='value'>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Options</label>
+      <select [value]='searchOptions[0]' formControlName='option' class="form-control">
+        <option> Choose option</option>
+        <option *ngFor='let option of searchOptions' class="upload-form-element-input-text">
+          {{option}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<table class="table" *ngIf='players.length > 0'>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Sallary</th>
+      <th scope="col">Team Name</th>
+    </tr>
+  </thead>
+  <tbody *ngFor='let player of players'>
+    <tr>
+      <th scope="row">{{player.playerId}}</th>
+      <td>{{player.firstName}}</td>
+      <td>{{player.lastName}}</td>
+      <td>{{player.position}}</td>
+      <td>{{player.sallary}}</td>
+      <td *ngIf='player.team'>{{player.team.name}}</td>
+    </tr>
+  </tbody>
+</table>

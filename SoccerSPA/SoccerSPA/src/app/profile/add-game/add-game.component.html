@@ -1,0 +1,86 @@
+<section class="upload-form">
+
+  <form class="upload-form-body" [formGroup]='uploadGameForm' (ngSubmit)='onSubmit()'>
+    <div class="upload-form-body-first">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Start time:</span>
+        <input type="datetime-local" formControlName='startTime'  class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["startTime"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">House Team Id:</span>
+        <input type="text" formControlName='houseTeamId' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["houseTeamId"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Guest Team Id:</span>
+        <input type="text" formControlName='guestTeamId' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["guestTeamId"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Stadium Id:</span>
+        <input type="text" formControlName='stadiumId' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["stadiumId"]'></app-validate-helper>
+      </div>
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">League Id:</span>
+        <input type="text" formControlName='leagueId' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["leagueId"]'></app-validate-helper>
+      </div>
+    </div>
+
+    <div class="upload-form-body-second">
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Amount of tickets sold:</span>
+        <input type="text" formControlName = 'amountSoldTickets' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["amountSoldTickets"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element">
+        <span class="upload-form-element-text">Result:</span>
+        <input type="text" formControlName = 'result' class="upload-form-element-input" placeholder="">
+        <app-validate-helper class="error-message" [name]='uploadGameForm.controls["result"]'></app-validate-helper>
+      </div>
+
+      <div class="upload-form-element-1">
+        <div class="upload-form-element-first">
+          <span class="upload-form-element-text">Choose game status:</span>
+          <div class="">
+            <select [value]='gameStatuses[0]' formControlName='status' class="upload-form-element-input">
+              <option> Choose game status</option>
+              <option *ngFor='let gameStatus of gameStatuses' class="upload-form-element-input-text">
+                {{gameStatus}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="upload-form-element-1">
+        <div class="upload-form-element-first">
+          <span class="upload-form-element-text">Countries:</span>
+          <div class="">
+            <select [value]='gameResults[0]' formControlName='gameResult' class="upload-form-element-input">
+              <option> Choose game result</option>
+              <option *ngFor='let gameResult of gameResults' class="upload-form-element-input-text">
+                {{gameResult}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+
+      <button class="upload-form-submit-btn" type="submit">Upload</button>
+    </div>
+
+  </form>
+
+  </section>
+
+

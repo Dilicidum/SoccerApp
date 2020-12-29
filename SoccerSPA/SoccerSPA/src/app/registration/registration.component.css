@@ -1,0 +1,101 @@
+.registration-form{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-body{
+  margin-left: 15%;
+  margin-top: 5%;
+  padding: 1%;
+  margin-right: 9%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 3px solid #4169E1;
+  box-shadow: 10px 5px 5px #4169E1;
+}
+
+.form-body-first-body,.form-body-second-body{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+}
+
+.form-body-second,.form-body-first{
+  display: flex;
+}
+
+.form-element{
+  flex-direction: column;
+  display: flex;
+  padding: 10%;
+
+}
+
+.form-element-input-text{
+  border-radius: 3px;
+  border: 2px solid lightgray;
+  height: 4vh;
+}
+
+a{
+  text-decoration: none;
+  color: #4169E1;
+}
+
+a:hover{
+  color:#6495ED;
+}
+
+.btn-submit-block{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-submit{
+  width: 70%;
+  height: 4vh;
+  border-radius: 4px;
+  border: 2px solid lightgray;
+  background-color: rgb(240,240,240);
+  font-size: 16px;
+  color:#6495ED;
+}
+
+.btn-submit:valid{
+  color: #4169E1;
+}
+
+.login-readress{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-readress-text{
+  padding: 1%;
+}
+
+
+.form-element-input-field{
+  display: flex;
+  border: 2px solid black;
+  height: 100%;
+}
+
+.form-element-genres-input{
+  display: flex;
+  padding: 10%;
+  margin: 5%;
+  border: 2px solid gray;
+  background-color: white;
+  border-radius: 3px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.genres{
+  color: #4169E1;
+}

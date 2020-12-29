@@ -1,0 +1,56 @@
+
+<div class="login">
+
+  <div class="login-form">
+    <section class="form-header">
+      <header class="form-header-text">
+        <span class="form-header-header-text">Login</span>
+      </header>
+    </section>
+
+    <form [formGroup]='loginForm' class="form-body" (ngSubmit)='onSubmit()'>
+      <div class="form-body-element">
+        <input type='text' appHighlightBlueInput  placeholder="username or email" formControlName='userName'>
+      </div>
+
+      <div class="form-body-element">
+        <input type='password' appHighlightBlueInput placeholder="password" formControlName='password'>
+      </div>
+
+      <div *ngIf='showInvalidLoginMessage' class="form-body-element">
+        <div class="error-message">
+          Invalid User Name or Password
+        </div>
+      </div>
+
+      <div class="form-body-element btn-submit">
+        <button type="submit" [disabled]='loginForm.invalid'>Log In</button>
+      </div>
+
+    </form>
+
+    <section class="form-body">
+      <section class="form-body-element">
+        <span class="form-footer-element-text">
+          <a>Log in with Facebook<i class="fab fa-facebook"></i></a>
+        </span>
+      </section>
+
+      <section class="form-body-element">
+        <span class="form-footer-element-text">
+          <a>Log in with Google<i class="fab fa-google"></i></a>
+        </span>
+      </section>
+
+      <section class="form-body-element">
+        <span class="form-footer-element-text">
+          <a routerLink='/ForgetPassword'>Forget Password?</a>
+        </span>
+      </section>
+
+      <section class="form-footer-element">
+        <span class="form-footer-element-text">Don`t have an account?<a routerLink='/Registration'>Sign in</a></span>
+      </section>
+
+  </section>
+  </div>
